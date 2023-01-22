@@ -14,19 +14,18 @@
   background-color: #F4F4F4;
 }
 
+.wrapper {
+
+}
+
+/*header https://www.youtube.com/watch?v=chJQofBSx94*/
 .header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 50; /*so it covers all the content for sure*/
+  z-index: 50; /*So it goes above all the layers for sure*/
   width: 100%;
-  /*max-width: 768px;*/
-  max-width: 1440px;
-  min-height: 74px;
-  margin: 0 auto;
-  padding: 0;
-}
-/*instruction https://www.youtube.com/watch?v=chJQofBSx94*/
+} /*1*/
 
 .header:before {
   content: '';
@@ -35,170 +34,108 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: bisque; /*to create a badge*/
-  z-index: 3;
-}
+  background-color:	burlywood;
+} /*2*/
+
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1440px;
+} /*set the borders of the container*/
+/*3.5*/
 
 .header__body {
   display: flex;
-  flex-direction: column;
-  /*justify-content: center;*/
+  justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: relative; /*To get the content above the header:before*/
   top: 0;
   left: 0;
-  /*z-index: 2;*/ /*to put out the content.
-  Delete after giving .header:before z-index: 3;*/
-  min-height: 640px;
-
-  /*min-height: 640px;*/
-}
-
-@media (min-width: 769px) {
-  .header__body {
-    min-height: 74px;
-  }
-}
+  z-index: 2;
+  height: 74px;
+} /*3, 4*/
 
 .header__burger {
-  display: block;
-  position: relative;
-  z-index: 5;
-  margin: 28px 18px 30px auto;
-  width: 22px;
-  height: 19px;
-  background-color: bisque;
-}
+  display: none;
+} /*8*/
+
 .header__burger-middle {
-  position: absolute;
-  top: 8px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background-color: #151515;
-}
-
-.header__burger:before,
-.header__burger:after {
-  content: ' ';
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background-color: #151515;
-}
-
-.header__burger:before {
-  top: 0;
-}
-
-.header__burger:after {
-  bottom: 0;
-}
+  display: none;
+} /*9*/
 
 .header__menu {
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: calc(100% - 110px);
-  /* height: 100%; */
-  margin: 144px 55px 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: #F4F4F4;
-  z-index: 5;
 }
 
-@media (min-width: 769px) {
+@media (max-width: 767px) {
   .header__burger {
-    display: none;
+    display: block; /*for the lines*/
+    position: relative;
+    width: 22px;
+    height: 19px;
   }
 
-  .header__menu {
-    justify-content: end;
-    margin: 0 120px 0 auto;
-    padding: 0;
-    min-width: 399px;
+  .header__burger-middle {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #151515;
   }
-}
+
+  .header__burger:before,
+  .header__burger:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #151515;
+  } /*the common styles*/ /* I must not put
+  .header__burger-middle-line here*/
+
+  .header__burger:before {
+    top: 0;
+  }
+
+  .header__burger:after {
+    bottom: 0;
+  }
+
+} /*7*/
 
 .header__list {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
   list-style: none;
-  row-gap: 32px;
-  margin: 0;
-  padding: 0;
-  min-height: 88px;
-}
-
-@media (min-width: 769px) {
-  .header__list {
-    flex-direction: row;
-    justify-content: space-between;
-    column-gap: 34px;
-    min-height: 74px;
-  }
-}
+} /*5*/
 
 .header__link {
-  margin: 0;
-  padding: 0;
+  margin: 0 34px 0;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 1;
-  text-align: center;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: right;
   color: #151515;
   text-decoration: none;
-  /*line-break: auto;*/
+} /*6*/
+
+.text-lorem {
+  margin: 0 auto;
+  padding: 100px 0 0; /*Remember that the header covers the beginning od the text
+  part so you need the top padding*/
+  max-width: 1440px;
 }
 
-@media (min-width: 769px) {
-  .header__link {
-    font-size: 14px;
-    line-height: 1.29;
-  }
-
-  .header__link:last-of-type {
-    display: block;
-    margin-right: 0;
-  }
-}
-
-.mode-switcher {
-  display: flex;
-  margin: 506px 92px 36px;
-  padding: 0;
-}
-
-@media (min-width: 769px) {
-  .mode-switcher {
-    display: none;
-  }
-}
-
-.mode-switcher__list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  min-height: 28px;
-}
-
-.content__text {
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: 2; /*to put out the content*/
-  min-height: 640px;
-  color: #151515;
+.text-lorem__paragraph {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  color: #222222;
+  opacity: 0.7;
 }
