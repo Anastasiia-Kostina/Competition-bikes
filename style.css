@@ -177,12 +177,13 @@
 
   .header__menu.active {
     top: 0; /*13.2 so it's seen when we click the burger*/
+    height: 100vh;
   }
 
   .header__list {
     flex-direction: column; /*block doesn't fit as it's harder to center it*/
     align-items: center;
-    margin: 0 55px 318px 55px;/*17 if we don't have 318px and have only
+    margin: 0 55px 314px 55px;/*17 if we don't have 314px and have only
     min-height: 118px, we don't get the scroll from header__menu overflow: auto;*/
     min-width: calc(100% - 110px); /*as at 768 399px*/
     min-height: 118px;
@@ -197,6 +198,113 @@
 
 } /*7*/
 /*----------------end header media 767-------------------*/
+
+.mode-switcher {
+  display: none;
+}
+/*.mode-switcher__container {
+}
+.mode-switcher__light-pic {
+}
+.mode-switcher__switch-btn {
+}
+.mode-switcher__dark-pic {
+}*/
+
+/*----------------start header switcher media 767-------------------*/
+@media (max-width: 767px) {
+.mode-switcher {
+  display: flex;
+  justify-content: row;
+  align-items: baseline;
+  position: fixed;
+  top: -131%;
+  left: 0;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 64px;
+  background-color: #ff6c56;
+  overflow: auto;
+  transition: all 0.4s ease-out 0s;
+}
+
+.mode-switcher.active {
+  top: 576px;
+}
+
+.mode-switcher__container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 92px 36px;
+  padding: 0;
+  list-style: none;
+}
+
+.mode-switcher__light-pic {
+  width: 28px;
+  height: 28px;
+  margin: 2px 22px 0 0;
+  padding: 0;
+  background-image: url(./images/switch_light.svg);
+  overflow: hidden;
+}
+
+.mode-switcher__light-pic.active {
+  background-image: url(./images/switch_light_dark.svg);
+}
+
+.mode-switcher__switch-btn {
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+  margin: 4px 22px 0 0;
+  padding: 0;
+  width: 44px;
+  height: 24px;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  background-color: #fff;
+  transition-duration: 300ms;
+}
+
+.mode-switcher__switch-btn:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  height: 20px;
+  width: 20px;
+  border-radius: 9999px;
+  background: #24B47E;
+  top: 2px;
+  left: 2px;
+  transition-duration: 300ms;
+  box-shadow: 0px 0px 0px #FFFFFF;
+}
+
+.switch-dark {
+  background-color: #545454;
+}
+
+.switch-dark:after {
+  left: 22px;
+}
+
+
+.mode-switcher__dark-pic {
+  width: 20px;
+  height: 20px;
+  margin: 4px 0 0;
+  padding: 0;
+  background-image: url(./images/switch_dark.svg);
+}
+
+.mode-switcher__dark-pic.active {
+  background-image: url(./images/switch_dark_dark.svg);
+}
+}
+/*----------------end header switcher media 767-------------------*/
 
 .text-lorem {
   margin: 0 auto;
