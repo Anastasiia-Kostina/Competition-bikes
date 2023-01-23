@@ -177,7 +177,7 @@
 
   .header__menu.active {
     top: 0; /*13.2 so it's seen when we click the burger*/
-    height: 100vh;
+    height: calc(100vh - 150px); /*So this zone isn't bigger at 319*/
   }
 
   .header__list {
@@ -215,7 +215,7 @@
 @media (max-width: 767px) {
 .mode-switcher {
   display: flex;
-  justify-content: row;
+  justify-content: center;
   align-items: baseline;
   position: fixed;
   top: -131%;
@@ -225,12 +225,13 @@
   width: 100%;
   height: 64px;
   background-color: #ff6c56;
-  overflow: auto;
+  /*overflow: auto; No need*/
   transition: all 0.4s ease-out 0s;
 }
 
 .mode-switcher.active {
-  top: 576px;
+  top: auto; /*So it goes up when the height is small*/
+  bottom: 0; /*So it goes up when the height is small*/
 }
 
 .mode-switcher__container {
@@ -244,7 +245,7 @@
 .mode-switcher__light-pic {
   width: 28px;
   height: 28px;
-  margin: 2px 22px 0 0;
+  margin: 0 22px 0 0;
   padding: 0;
   background-image: url(./images/switch_light.svg);
   overflow: hidden;
