@@ -10,8 +10,12 @@
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
-  color: #FFFFFF;
+  color: #151515;
   background-color: #F4F4F4;
+}
+
+.border {
+  border: 2px solid red;
 }
 
 /*.wrapper {
@@ -307,14 +311,91 @@
 }
 /*----------------end header switcher media 767-------------------*/
 
-.text-lorem {
-  margin: 0 auto;
-  padding: 100px 0 0; /*Remember that the header covers the beginning od the text
-  part so you need the top padding*/
-  max-width: 1440px;
+/*----------------lead------------*/
+.lead {
+  margin: 74px 0 0;
+  padding: 0;
 }
 
-.text-lorem__paragraph {
+.lead__container {
+  display:grid;
+  grid-template-columns: 31.94vw minmax(min-content, 1fr);
+  grid-template-rows: minmax(min-content, 1fr);
+  grid-template-areas:
+    "title bg-img"
+    "description bg-img"
+    "btn bg-img"
+    "bike-name bg-img";
+  column-gap: 250px;
+  margin: 20px 0 0 120px;
+  padding: 0;
+  max-width: 1320px;
+  /*max-width: calc(100% - 120px);*/
+  box-sizing: border-box;
+}
+
+.lead__title {
+  grid-area: title;
+  margin: 80px 0 0 0;
+  width: 460px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 1.09;
+  letter-spacing: -0.5px;
+  color: #151515;
+}
+
+.lead__pic-background {
+  grid-area: bg-img;
+  background-image: url(./images/lead_view_1_1440.jpg);
+  margin: 20px 0 0 0;
+  width: 100%;
+  max-width: 610px;
+  height: 836px;
+  object-fit: cover;
+  object-position: center;
+  box-sizing: border-box;
+}
+
+.lead__pic-bike-container {
+  position: sticky;
+  top: 414px;
+  left: 43.75vw;
+  width: 440px;
+  height: 353px;
+}
+
+.lead__pic-bike-wrapper {
+  position: sticky;
+  top: 421px;
+  left: 0;
+  /*position: relative;
+  top: 0;
+  left: 0;*/
+  width: 440px;
+  height: 300px;
+  background: #F4F4F4;
+  box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
+  border-radius: 20px;
+}
+
+.lead__pic-bike {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 20px 50px;
+  /*position: sticky;
+  top: 486px;*/
+  width: 340px;
+  height: 260px;
+}
+
+.lead__description {
+  grid-area: description;
+  margin: 50px 0 0 0;
+  width: 460px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -324,11 +405,44 @@
   opacity: 0.7;
 }
 
-/*----------------start header media 767-------------------*/
-@media (max-width: 767px) {
-  .text-lorem__paragraph {
-    margin: 0 18px;
-  } /*14 then 'body (I have 'page') lock' in js lock the scroll
-  while scrolling the menu */
+.button__details {
+  grid-area: btn;
+  margin: 50px 0 0 0;
+  width: 180px;
+  height: 50px;
+  border: #24B47E;
+  background: #24B47E;
+  border-radius: 4px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #FFFFFF;
 }
-/*----------------end header media 767-------------------*/
+
+.lead__bike-name-container {
+  grid-area: bike-name;
+  display: flex;
+  align-items: baseline;
+  column-gap: 30px;
+  margin: 167px 0 209px 0;
+  width: 356px;
+}
+
+.lead__bike-name {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  color: #151515;
+}
+
+.lead__divider {
+  width: 132px;
+  height: 2px;
+  background: #D7D4D4;
+}
