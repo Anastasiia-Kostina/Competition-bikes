@@ -13,3 +13,11 @@ $('.mode-switcher__switch-btn').click(function(){
   $('.mode-switcher__light-pic,.mode-switcher__dark-pic').toggleClass('active');
 });
 });
+
+//-----lead---- background when sticky
+$(document).scroll(function(){
+  t = (30 - $(this).scrollTop())/100;
+  if(t<0)t=0;
+  $('.lead__sticky-cover_bottom').css({opacity: t});
+  $('.lead__sticky-cover_top').css({opacity: t})
+})

@@ -313,8 +313,13 @@
 
 /*----------------lead------------*/
 .lead {
-  margin: 74px 0 0;
+  position: relative;
+  top: 0;
+  left: 0; /*added for the sticky part*/
+  margin: 74px auto 0;
   padding: 0;
+  max-width: 1440px;
+  box-sizing: border-box;
 }
 
 .lead__container {
@@ -359,39 +364,6 @@
   box-sizing: border-box;
 }
 
-.lead__pic-bike-container {
-  position: sticky;
-  top: 414px;
-  left: 43.75vw;
-  width: 440px;
-  height: 353px;
-}
-
-.lead__pic-bike-wrapper {
-  position: sticky;
-  top: 421px;
-  left: 0;
-  /*position: relative;
-  top: 0;
-  left: 0;*/
-  width: 440px;
-  height: 300px;
-  background: #F4F4F4;
-  box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
-  border-radius: 20px;
-}
-
-.lead__pic-bike {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 20px 50px;
-  /*position: sticky;
-  top: 486px;*/
-  width: 340px;
-  height: 260px;
-}
-
 .lead__description {
   grid-area: description;
   margin: 50px 0 0 0;
@@ -426,13 +398,18 @@
 .lead__bike-name-container {
   grid-area: bike-name;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   column-gap: 30px;
   margin: 167px 0 209px 0;
+  padding: 0;
   width: 356px;
+  min-height: 18px;
+  box-sizing: border-box;
 }
 
 .lead__bike-name {
+  margin: 0;
+  padding: 0; /*don't forget to reset to 0*/
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -446,3 +423,80 @@
   height: 2px;
   background: #D7D4D4;
 }
+
+.lead__sticky-cover {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 630px;
+  z-index: 4;
+  margin: 0;
+  padding: 0;
+  width: 810px;
+  height: 970px;
+  box-sizing: border-box;
+}
+
+.lead__sticky-cover_top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 347px;
+  background: #FF007A;
+  opacity: 0.3;
+}
+
+.lead__pic-bike-container {
+  position: sticky;
+  top: 368px;
+  left: 0;
+  z-index: 5;
+  width: 440px;
+  height: 352px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.lead__pic-bike-cover {
+  position: relative;
+  top: 52px;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 300px;
+  background: #F4F4F4;
+  box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
+  border-radius: 20px;
+}
+
+.lead__pic-bike {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 20px 50px;
+}
+
+/*.lead__pic-bike-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 352px;
+}*/
+
+.lead__sticky-cover_bottom {
+  position: absolute;
+  top: 777px;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 79px;
+  background: #FF007A;
+  opacity: 0.3;
+}
+
