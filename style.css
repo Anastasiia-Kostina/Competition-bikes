@@ -434,7 +434,8 @@
   margin: 0;
   padding: 0;
   width: 810px;
-  height: 970px;
+  height: 775px;
+  /*height: 970px;) worked when there were not other sections*/
   box-sizing: border-box;
 }
 
@@ -446,7 +447,7 @@
   width: 100%;
   height: 347px;
   background: #FF007A;
-  opacity: 0.3;
+  opacity: 0;
 }
 
 .lead__pic-bike-container {
@@ -497,6 +498,72 @@
   width: 100%;
   height: 79px;
   background: #FF007A;
-  opacity: 0.3;
+  opacity: 0;
 }
 
+/*-----------intro---------*/
+.intro-quote {
+  display: flex;
+  justify-content: flex-start;
+  margin: 120px 120px 60px 120px;
+  padding: 0;
+}
+
+.intro-quote__image {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 650px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.intro-quote__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 0 0 80px;
+}
+
+.intro-quote__quote {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 1.29;
+  letter-spacing: -0.5px;
+  color: #151515;
+}
+
+.intro-quote__info {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.intro-quote__quote-author {
+  margin: 0;
+  padding: 0;
+  max-width: 121px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #151515;
+}
+
+.intro-quote__quote-author-subline {
+  margin: 6px 0 0;
+  padding: 0;
+  max-width: 97px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #222222;
+  opacity: 0.7;
+}
