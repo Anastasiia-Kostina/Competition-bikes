@@ -568,6 +568,15 @@
   opacity: 0.7;
 }
 
+/*try road js*/
+.road-types li {
+  display: none;
+}
+
+.road-types .current {
+  display: block;
+}
+
 /*-------road-types---------*/
 .road-types {
   margin: 0 0 60px 120px;
@@ -613,8 +622,11 @@
 }
 
 .road-type__horizontal-scroll {
-  display: flex;
-  flex-wrap: nowrap;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 2;display: flex;
+  white-space: nowrap;
   margin: 80px 0 0;
   padding: 0;
   width: 100%;
@@ -622,6 +634,23 @@
   box-sizing: border-box;
   overflow: hidden;
 }
+
+/*.road-type__img-1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  max-width: 650px;
+  max-height: 400px;
+}*/
+
+/*.road-type__img-tt {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  margin: 0 0 0 120px;
+}*/
 
 .road-type__img {
   margin: 0 0 0 40px;
@@ -636,6 +665,46 @@
   margin: 0;
 }
 
+.road-type__img-vector-bg {
+  position: absolute;
+  top: 344px;
+  left: 0;
+  z-index: 3;
+  background-image: url(./images/scroll_button_road_bg_1440.png);
+  background-position: center center;
+  background-size: cover;
+}
+
+.road-type__img-vector-motorway {
+  position: absolute;
+  top: 356px;
+  left: 0;
+  z-index: 4;
+  margin: 0 34px 12px 16px; /*It couldn't move properly*/
+  background-position: center center;
+  background-size: cover;
+}
+
+.road-type__img-vector-gravel {
+  position: absolute;
+  top: 356px;
+  left: 0;
+  z-index: 4;
+  margin: 12px 34px 12px 16px;
+  background-position: center center;
+  background-size: cover;
+}
+
+.road-type__img-vector-tt {
+  position: absolute;
+  top: 356px;
+  left: 0;
+  z-index: 4;
+  margin: 12px 34px 12px 16px;
+  background-position: center center;
+  background-size: cover;
+}
+
 .h-scroll-btn__wrapper {
   display: flex;
   flex-direction: row;
@@ -648,6 +717,7 @@
   position: relative;
   top: 0;
   left: 0;
+  z-index: 1;
   margin: 0;
   padding: 0;
   width: 50px;
@@ -658,10 +728,17 @@
   cursor: pointer;
 }
 
+.h-scroll-btn_left:hover {
+  background: #EBEBEB;
+  opacity: 0.6;
+  border-radius: 50px;
+}
+
 .btn__arrow {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 2;
   margin: 17px 20px;
   width: 7px;
   height: 16px;
@@ -673,12 +750,19 @@
   background-size: cover;
 }
 
-/*.h-scroll-btn_left {
-
-}*/
+.btn__arrow_left:hover {
+  opacity: 1;
+}
 
 .h-scroll-btn_right {
   margin: 0 0 0 20px;
+}
+
+.h-scroll-btn_right:hover {
+  margin: 0 0 0 20px;
+  background: #EBEBEB;
+  opacity: 0.6;
+  border-radius: 50px;
 }
 
 .btn__arrow_right {
@@ -687,7 +771,11 @@
   background-size: cover;
 }
 
+.btn__arrow_right:hover {
+  opacity: 1;
+}
 
 
 
 /*-------end road-types-------*/
+
