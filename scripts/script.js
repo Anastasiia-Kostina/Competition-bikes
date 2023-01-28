@@ -44,7 +44,7 @@ $(window).scrollBottom(300);
  // return false;
 //});
 
-  var pages = document.querySelectorAll('.pages'),
+  var pages = document.querySelectorAll('.pages-roads'),
     divs = pages[0].querySelectorAll('div'),
     i = 0, j = 0;
 
@@ -67,6 +67,64 @@ $(window).scrollBottom(300);
       }
       divs[i].style.display="block";
     }
+
+    var selector = '.bikes__links a';
+
+    $(selector).on('click', function(){
+        $(selector).removeClass('active');
+        $(this).addClass('active');
+    });
+
+
+
+
+
+    /*$(document).ready(function(){
+         var url=document.location.href;
+          $.each($(".bikes__link a"),function(){
+          if(this.href==url){$(this).addClass('active');};
+         });
+      });*/
+
+
+    /*function setNewEntry(entry) {
+      $('#motorway-bike').html(getNewEntry($('#motorway-bike').html(), entry));
+  }
+
+    function setNewEntry(entry) {
+      $('#gravel-bike').html(getNewEntry($('#gravel-bike').html(), entry));
+  }
+
+    function setNewEntry(entry) {
+      $('#tt-bike').html(getNewEntry($('#tt-bike').html(), entry));
+  }*/
+
+
+    /*var pages = document.querySelectorAll('.pages-bikes'),
+    divs = pages[0].querySelectorAll('div'),
+    i = 0, j = 0;
+
+    down.onclick = function() {
+      divs[i].style.display="none";
+      i = (i < (divs.length - 1))?i+1:0;
+      if(i == 0) {    // здесь как-бы загрузка предыдущей страницы
+        j = (j > 0)?j -1:pages.length - 1;
+        divs = pages[j].querySelectorAll('div')
+      }
+      divs[i].style.display="block";
+    }
+    up.onclick = function() {
+      divs[i].style.display="none";
+      i = (i > 0)?i -1:divs.length - 1;
+      if(i == divs.length - 1) { // здесь как-бы загрузка следующей страницы
+        j = (j < (pages.length - 1))?j+1:0;
+        divs = pages[j].querySelectorAll('div');
+        i = divs.length - 1;
+      }
+      divs[i].style.display="block";
+    }*/
+
+
 
     //var divs = document.querySelectorAll('div'), i = 0;
     //down.onclick = function() {
