@@ -40,10 +40,9 @@ tabs.addEventListener("click", function(ev) {
   }
   var showElemtn = document.querySelectorAll('div#' + ev.target.id + '')[0];
   showElemtn.classList.toggle("active");
+
+  return false;
 });
-
-
-
 //road-types ecxperiment
 
 
