@@ -98,8 +98,9 @@
         </div>
       </section>
         <!---------------------classic------------------------------>
-      <section id="road-types">
-       <div class="tab road-type__motorway" id="motorway">
+      <section class="road-types">
+      <div class="pages">
+       <div class="road-type" id="motorway">
           <h1 class="road-type__name">Шоссе</h1>
           <p class="road-type__info">На&nbsp;шоссейном велосипеде можно ездить по&nbsp;асфальту на&nbsp;разных градиентах: будь&nbsp;то горы или равнины. Гонки проходят в&nbsp;командном пелотоне, но&nbsp;тренироваться можно и&nbsp;самостоятельно.</p>
           <div class="road-type__horizontal-scroll">
@@ -115,13 +116,15 @@
             <img class="road-type__img" src="./images/scroll_road-view_2_1440.jpg" alt="Фото дороги в лесу, бездорожье">
             <img class="road-type__img" src="./images/scroll_road-view_3_1440.jpg" alt="Фото дороги в зелёных полях, равнинный асфальт">
           </div>
-          <div class="h-scroll-btn__wrapper">
-            <button class="h-scroll-btn h-scroll-btn_left"><div class="btn__arrow btn__arrow_left"></div></button>
-            <button class="h-scroll-btn h-scroll-btn_right"><div class="btn__arrow btn__arrow_right"></div></button>
-          </div>
+          <!--<div class="h-scroll-btn__wrapper">
+            <button class="h-scroll-btn h-scroll-btn_left" id="up"><div class="btn__arrow btn__arrow_left"></div></button>
+            <button class="h-scroll-btn h-scroll-btn_right" id="down"><div class="btn__arrow btn__arrow_right"></div></button>
+          </div>-->
         </div>
+      </div>
         <!----------------------------------------------------->
-        <div class="tab road-type__gravel" id="gravel">
+      <div class="pages">
+        <div class="road-type" id="gravel" style="display:none;">
           <h1 class="road-type__name">Грэвел</h1>
           <p class="road-type__info">Грэвел похож на&nbsp;шоссейный велосипед, но&nbsp;конструкция рамы немного отличается, и&nbsp;на&nbsp;нём стоят более широкие покрышки, всё для того чтобы проехать по&nbsp;лёгкому бездорожью.</p>
           <div class="road-type__horizontal-scroll">
@@ -137,12 +140,14 @@
             <img class="road-type__img" src="./images/scroll_road-view_3_1440.jpg" alt="Фото дороги в зелёных полях, равнинный асфальт">
             <img class="road-type__img" src="./images/scroll_road-view_1_1440.jpg" alt="Фото асфальтированного шоссе возле горной цепи">
           </div>
-          <div class="h-scroll-btn__wrapper">
-            <button class="h-scroll-btn h-scroll-btn_left"><div class="btn__arrow btn__arrow_left"></div></button>
-            <button class="h-scroll-btn h-scroll-btn_right"><div class="btn__arrow btn__arrow_right"></div></button>
-          </div>
+          <!--<div class="h-scroll-btn__wrapper">
+            <button class="h-scroll-btn h-scroll-btn_left" id="up"><div class="btn__arrow btn__arrow_left"></div></button>
+            <button class="h-scroll-btn h-scroll-btn_right" id="down"><div class="btn__arrow btn__arrow_right"></div></button>
+          </div>-->
         </div>
-        <div class="tab road-type__tt" id="tt">
+      </div>
+      <div class="pages">
+        <div class="road-type" id="tt" style="display:none;">
           <h1 class="road-type__name">ТТ</h1>
           <p class="road-type__info">ТТ&nbsp;&mdash; это велосипед для триатлона или раздельного старта, гооняют на&nbsp;таком велике только по&nbsp;равнинному асфальту, велик очень быстрые и&nbsp;аэродинамичный.</p>
           <div class="road-type__horizontal-scroll">
@@ -158,15 +163,23 @@
             <img class="road-type__img" src="./images/scroll_road-view_1_1440.jpg" alt="Фото асфальтированного шоссе возле горной цепи">
             <img class="road-type__img" src="./images/scroll_road-view_2_1440.jpg" alt="Фото дороги в лесу, бездорожье">
           </div>
-          <div class="h-scroll-btn__wrapper">
-            <button class="h-scroll-btn h-scroll-btn_left"><div class="btn__arrow btn__arrow_left"></div></button>
-            <button class="h-scroll-btn h-scroll-btn_right"><div class="btn__arrow btn__arrow_right"></div></button>
-          </div>
+          <!--<div class="h-scroll-btn__wrapper">
+            <button class="h-scroll-btn h-scroll-btn_left" id="up"><div class="btn__arrow btn__arrow_left"></div></button>
+            <button class="h-scroll-btn h-scroll-btn_right" id="down"><div class="btn__arrow btn__arrow_right"></div></button>
+          </div>-->
         </div>
+      </div>
+
+      <div class="h-scroll-btn__wrapper">
+        <button class="h-scroll-btn h-scroll-btn_left" id="up"><div class="btn__arrow btn__arrow_left"></div></button>
+        <button class="h-scroll-btn h-scroll-btn_right" id="down"><div class="btn__arrow btn__arrow_right"></div></button>
+      </div>
+
       </section>
       <!--------------------bikes-->
-      <section class="bikes">
-        <div class="tab bikes__motorway" id="motorway-bike">
+      <section class="bikes-types">
+      <!--<div class="page">-->
+        <div class="bikes" id="motorway-bike">
           <div class="bikes__header">
             <div class="bikes__name">Велосипеды</div>
             <nav class="bikes__links">
@@ -203,7 +216,7 @@
           </div>
         </div>
         <!----->
-        <div class="bikes__gravel" id="gravel-bike">
+        <div class="bikes" id="gravel-bike" style="display:none;">
           <div class="bikes__header">
             <div class="bikes__name">Велосипеды</div>
             <nav class="bikes__links">
@@ -229,7 +242,7 @@
                 Specialized S-Works Diverge
               </figcaption>
             </figure>
-            <div class="bikes__figure-container">
+            <figure class="bikes__figure-container">
               <div class="bike__img-cover">
                 <img class="bike__img" src="./images/gravel_bikes/scroll_gravel-bike_3_1440.jpg" alt="Фото велосипеда Cannondale Topstone Lefty 3">
               </div>
@@ -240,7 +253,7 @@
           </div>
         </div>
         <!---->
-        <div class="bikes__tt" id="tt-bike">
+        <div class="bikes" id="tt-bike" style="display:none;">
           <div class="bikes__header">
             <div class="bikes__name">Велосипеды</div>
             <nav class="bikes__links">
@@ -276,6 +289,7 @@
             </figure>
           </div>
         </div>
+      <!--</div>-->
       </section>
       <section class="exercises">
 

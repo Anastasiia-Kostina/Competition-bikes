@@ -570,18 +570,22 @@
 
 /*-------road-types---------*/
 #road-types {
-  margin: 0 0 60px 120px;
+  margin: 0;
   padding: 0;
   max-width: 1440px;
   box-sizing: border-box;
 }
 
-.road-type__motorway,
-.road-type__gravel,
-.road-type__tt {
+.page {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.road-type {
   display: flex;
   flex-direction: column;
-  margin: 60px 0 0;
+  margin: 60px 0 60px 120px;
   padding: 0;
   width: 100%;
   max-width: 1320px;
@@ -626,23 +630,6 @@
   box-sizing: border-box;
   overflow: hidden;
 }
-
-/*.road-type__img-1 {
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  max-width: 650px;
-  max-height: 400px;
-}*/
-
-/*.road-type__img-tt {
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  margin: 0 0 0 120px;
-}*/
 
 .road-type__img {
   margin: 0 0 0 40px;
@@ -772,15 +759,13 @@
 /*-------end road-types-------*/
 
 /*-------bikes start--------------------*/
-.bikes {
+.bikes-types {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.bikes__motorway,
-.bikes__gravel,
-.bikes__tt {
+.bikes {
   display: flex;
   flex-direction: column;
   margin: 60px 120px;
@@ -788,10 +773,6 @@
   width: 100%;
   max-width: 1200px;
   box-sizing: border-box;
-}
-
-.bikes__tt {
-  margin: 60px 0;
 }
 
 .bikes__header {

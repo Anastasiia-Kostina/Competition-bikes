@@ -32,17 +32,61 @@ $(window).scrollBottom(300);
 
 //----road-types----
 
-var tabs = document.getElementById('road-types');
-tabs.addEventListener("click", function(ev) {
-  var hideElement = document.getElementsByClassName('no-display');
-  for (i = 0; i < hideElement.length; i++) {
-    hideElement[i].classList.remove("active")
-  }
-  var showElemtn = document.querySelectorAll('div#' + ev.target.id + '')[0];
-  showElemtn.classList.toggle("active");
+//var tabs = document.getElementById('main');
+//tabs.addEventListener("click", function(ev) {
+ // var hideElement = document.getElementsByClassName('no-display');
+ // for (i = 0; i < hideElement.length; i++) {
+  //  hideElement[i].classList.remove("active")
+ // }
+ // var showElemtn = document.querySelectorAll('div#' + ev.target.id + '')[0];
+// showElemtn.classList.toggle("active");
 
-  return false;
-});
-//road-types ecxperiment
+ // return false;
+//});
+
+  var pages = document.querySelectorAll('.pages'),
+    divs = pages[0].querySelectorAll('div'),
+    i = 0, j = 0;
+
+    down.onclick = function() {
+      divs[i].style.display="none";
+      i = (i < (divs.length - 1))?i+1:0;
+      if(i == 0) {    // здесь как-бы загрузка предыдущей страницы
+        j = (j > 0)?j -1:pages.length - 1;
+        divs = pages[j].querySelectorAll('div')
+      }
+      divs[i].style.display="block";
+    }
+    up.onclick = function() {
+      divs[i].style.display="none";
+      i = (i > 0)?i -1:divs.length - 1;
+      if(i == divs.length - 1) { // здесь как-бы загрузка следующей страницы
+        j = (j < (pages.length - 1))?j+1:0;
+        divs = pages[j].querySelectorAll('div');
+        i = divs.length - 1;
+      }
+      divs[i].style.display="block";
+    }
+
+    //var divs = document.querySelectorAll('div'), i = 0;
+    //down.onclick = function() {
+      //divs[i].style.display="none";
+      //i = (i < (divs.length - 1))?i+1:0;
+      //divs[i].style.display="block";
+    //}
+
+    //up.onclick = function() {
+      //divs[i].style.display="none";
+      //i = (i > 0)?i-1:divs.length - 1;
+      //divs[i].style.display="block";
+    //}
+
+
+
+
+
+//road-types experiment
+
+//
 
 
