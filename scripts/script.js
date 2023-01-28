@@ -78,6 +78,29 @@ $(window).scrollBottom(300);
 
 
 
+    /*$('#motorway-bikes').click(function(){
+      $('.content-bikes').load('bikes-roads.html #motorway-bike-item');
+    });
+
+    $('#gravel-bikes').click(function(){
+      $('.content-bikes').load('bikes-roads.html #gravel-bike-item');
+  });
+
+    $('#tt-bikes').click(function(){
+      $('.content-bikes').load('bikes-roads.html #tt-bike-item');
+    });
+
+    /*$( "button" ).click(function() {
+      $( "div" ).each(function( index, element ) {
+        // element == this
+        $( element ).css( "backgroundColor", "yellow" );
+        if ( $( this ).is( "#stop" ) ) {
+          $( "span" ).text( "Stopped at div index #" + index );
+          return false;
+        }
+      });
+    });*/
+
 
     /*$(document).ready(function(){
          var url=document.location.href;
